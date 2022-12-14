@@ -1,3 +1,5 @@
+# Create web app
+
 This web app defines a single route, /, which returns the string "Hello, World!" when accessed. To run this web app, you would need to have Flask installed on your machine.
 
 To run the app, you can use the following command:
@@ -29,3 +31,31 @@ This will send an HTTP GET request to the / route of the web app, and the hello(
 Alternatively, you can access the / route using a web browser by visiting http://localhost:5000/ in the address bar. This will also trigger the hello() function and display the string "Hello, World!" in the browser.
 
 To deploy this web app to Azure, you would need to package it into a Docker container and then deploy the container to Azure using the Azure Container Registry or a similar service. You can learn more about deploying Docker containers to Azure on the Azure website.
+
+# Deploy to Azure
+
+To deploy the previous web app to Azure, you will need to create a Docker container for the web app and then deploy the container to Azure using the Azure Container Registry or a similar service.
+
+Here are the steps to deploy the web app to Azure:
+
+1. Install Docker on your machine and create a Dockerfile for your web app. A Dockerfile is a text file that contains instructions for building a Docker image for your web app.
+
+2. In the Dockerfile, specify the base image that your web app will be built on, such as python:3.8-slim.
+
+3. Add instructions to the Dockerfile to install any dependencies that your web app requires, such as Flask.
+
+4. Add instructions to copy your web app files into the Docker image.
+
+5. Add a final instruction to the Dockerfile to specify the command that should be run when the Docker container is started, such as flask run.
+
+6. Build the Docker image using the Dockerfile.
+
+7. Push the Docker image to the Azure Container Registry or a similar service.
+
+8. In the Azure portal, create a new web app and select the Docker image that you pushed to the container registry as the source for the web app.
+
+9. Configure the web app settings and deploy the web app to Azure.
+
+It may take a few minutes for Azure to create and deploy the web app. Once it is ready, you can access it by visiting the URL provided on the "Overview" page for your web app in the Azure portal.
+
+For more detailed instructions and information about deploying Docker containers to Azure, you can refer to the Azure Container Registry documentation on the Azure website.
