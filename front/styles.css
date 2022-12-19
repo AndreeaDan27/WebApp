@@ -1,0 +1,12 @@
+/* CSS File (styles.css) */
+
+body {
+    background-color: lightblue;
+    text-align: center;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: rgb(158, 14, 14);
+}
